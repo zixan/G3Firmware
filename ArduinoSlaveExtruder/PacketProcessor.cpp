@@ -279,6 +279,7 @@ void handle_query()
   //WORKING
   case SLAVE_CMD_SET_SERVO_1_POS:
 #ifdef HAS_SERVOS
+  digitalWrite(13,HIGH);
     servo1.attach(9);
     servo1.write(masterPacket.get_8(2));
 #endif

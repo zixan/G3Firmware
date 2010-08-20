@@ -5,6 +5,9 @@
 //these routines provide an easy interface for controlling timer1 interrupts
 
 //this handles the timer interrupt event
+
+
+/*
 SIGNAL(SIG_OUTPUT_COMPARE1A)
 {
   #if MOTOR_STYLE == 1
@@ -31,7 +34,7 @@ SIGNAL(SIG_OUTPUT_COMPARE1A)
       analogWrite(MOTOR_2_SPEED_PIN, stepper_low_pwm);
   #endif
 }
-
+*/
 void enableTimer1Interrupt()
 {
   //enable our interrupt!

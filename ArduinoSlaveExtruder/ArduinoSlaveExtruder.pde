@@ -44,9 +44,14 @@
 void init_serial();
 void initialize();
 
+// TEStT
+//Servo servo;
+
 //set up our firmware for actual usage.
 void setup()
 {
+  
+
   //setup our firmware to a default state.
   init_serial(); //dont want to re-initialize serial!
   initialize();
@@ -54,7 +59,11 @@ void setup()
   //this is a simple text string that identifies us.
   //Serial.print("R3G Slave v");
   //Serial.println(FIRMWARE_VERSION, DEC);
+
+  // TEST CODE
+  //servo.attach(10);
 }
+
 
 //this function takes us back to our default state.
 void initialize()
@@ -79,6 +88,9 @@ void init_serial()
 //handle various things we're required to do.
 void loop()
 {
+  // TEST CODE
+  //servo.write(18);
+  
   //check for and handle any packets that come in.
   process_packets();
 
@@ -96,6 +108,9 @@ void loop()
 #endif
 
   }
+  
+  //servo.write(0);
+  
 }
 
 //handle the abortion of a print job

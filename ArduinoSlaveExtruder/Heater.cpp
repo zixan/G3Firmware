@@ -140,7 +140,7 @@ void Heater::manage_temperature()
   { 
     temp_prev_time = time;
     output = temp_update(dt);
-    digitalWrite(DEBUG_PIN, (output > 0)?HIGH:LOW);
+    //digitalWrite(DEBUG_PIN, (output > 0)?HIGH:LOW);
     analogWrite(outputPin, output);
   }
 }

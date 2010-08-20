@@ -71,9 +71,9 @@ bool hasEEPROMSettings();
 void initThermTable() {
   // Check for valid table in eeprom.
 #ifdef HAS_THERMISTOR
-  digitalWrite(DEBUG_PIN, LOW);
+//  digitalWrite(DEBUG_PIN, LOW);
   if (hasEEPROMSettings()) {
-    digitalWrite(DEBUG_PIN, HIGH);
+  //  digitalWrite(DEBUG_PIN, HIGH);
     uint8_t* dest = (uint8_t*)temptable;
     for (int8_t i = 1; i < NUMTEMPS*sizeof(int16_t)*2; i++) {
       *(dest+i) = EEPROM.read(EEPROM_THERM_TABLE_OFFSET+i);

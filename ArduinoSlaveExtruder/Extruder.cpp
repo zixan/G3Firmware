@@ -104,7 +104,7 @@ void init_extruder()
 
   //setup our debug pin.
   pinMode(DEBUG_PIN, OUTPUT);
-  digitalWrite(DEBUG_PIN, HIGH);
+  //digitalWrite(DEBUG_PIN, HIGH);
 
   //default to zero.
   extruder_heater.set_target_temperature(0);
